@@ -1,1 +1,1 @@
-This repository is used to obtain different fragments for use in projects.
+A curated collection of VS Code snippets, templates, and configurations designed to boost developer productivity. Includes ready-to-use code snippets for making it easier for developers to write clean, efficient, and consistent code.

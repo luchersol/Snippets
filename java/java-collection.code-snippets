@@ -1,0 +1,109 @@
+{
+    "New List Empty": {
+        "scope": "java",
+        "prefix": "ls",
+        "description": "Create a new empty List (ArrayList by default)",
+        "body": [
+            "List<${1:String}> ${2|list,ls|} = new ArrayList<>();"
+        ],
+    },
+    
+    "New List with values": {
+        "scope": "java",
+        "prefix": "lsv",
+        "description": "Create a new List with initial values",
+        "body": [
+            "List<${1:String}> ${2|list,ls|} = new ArrayList<>(Arrays.asList(${3:/* values */}));"
+        ],
+    },
+    
+    "New Set Empty": {
+        "scope": "java",
+        "prefix": "set",
+        "description": "Create a new empty Set (HashSet by default)",
+        "body": [
+            "Set<${1:String}> ${2|set,ss|} = new HashSet<>();"
+        ],
+    },
+    
+    "New Set with values": {
+        "scope": "java",
+        "prefix": "setv",
+        "description": "Create a new Set with initial values",
+        "body": [
+            "Set<${1:String}> ${2|set,ss|} = new HashSet<>(Arrays.asList(${3:/* values */}));"
+        ],
+    },
+    
+    "New Map Empty": {
+        "scope": "java",
+        "prefix": "map",
+        "description": "Create a new empty Map (HashMap by default)",
+        "body": [
+            "Map<${1:String}, ${2:String}> ${2|map,dict|} = new HashMap<>();"
+        ],
+    },
+    
+    "New Map with values": {
+        "scope": "java",
+        "prefix": "mapv",
+        "description": "Create a new Map with initial values",
+        "body": [
+            "Map<${1:String}, ${2:String}> ${2|map,dict|} = new HashMap<>(Map.of(${4:/* key, value */}));"        ],
+    },
+    
+    "New Optional Empty": {
+        "scope": "java",
+        "prefix": "opt",
+        "description": "Create a new empty Optional",
+        "body": [
+            "Optional<${1:String}> ${2:emptyOpt} = Optional.empty();"
+        ],
+    },
+    
+    "New Optional with value": {
+        "scope": "java",
+        "prefix": "optv",
+        "description": "Create a new Optional with a value",
+        "body": [
+            "Optional<${1:String}> ${2:opt} = Optional.of(${3:/* value */});"
+        ],
+    },
+    
+    "New Queue Empty": {
+        "scope": "java",
+        "prefix": "queue",
+        "description": "Create a new empty Queue (LinkedList by default)",
+        "body": [
+            "Queue<${1:String}> ${2:queue} = new LinkedList<>();"
+        ],
+    },
+    
+    "New Queue with values": {
+        "scope": "java",
+        "prefix": "queuev",
+        "description": "Create a new Queue with initial values",
+        "body": [
+            "Queue<${1:String}> ${2:queue} = new LinkedList<>(Arrays.asList(${3:/* values */}));"
+        ],
+    },
+    
+    "New Deque Empty": {
+        "scope": "java",
+        "prefix": "deque",
+        "description": "Create a new empty Deque (LinkedList by default)",
+        "body": [
+            "Deque<${1:String}> ${2:deque} = new LinkedList<>();"
+        ],
+    },
+
+    "New Deque with values": {
+        "scope": "java",
+        "prefix": "dequev",
+        "description": "Create a new Deque with initial values",
+        "body": [
+            "Deque<${1:String}> ${2:deque} = new LinkedList<>(Arrays.asList(${3:/* values */}));"
+        ],
+    },
+
+}
