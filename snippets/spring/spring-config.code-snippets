@@ -1,98 +1,96 @@
 {
-    
-    "Create Spring Bean": {
-        "scope": "java",
-        "prefix": "spring-bean",
-        "description": "Create Bean",
-        "body": [
-            "@Bean",
-            "public ${1:Type} ${2:name}() {",
-            "    return new ${1:Type}();",
-            "}"
-        ],
-    },
+  "Spring Bean Method": {
+    "scope": "java",
+    "prefix": "spring:bean",
+    "description": "Create a Spring @Bean method returning a new instance of a type",
+    "body": [
+      "@Bean",
+      "public ${1:Type} ${2:name}() {",
+      "    return new ${1:Type}();",
+      "}"
+    ]
+  },
 
-    "Create Spring Config": {
-        "scope": "java",
-        "prefix": "spring-config",
-        "description": "Create a Spring @Configuration class with example beans",
-        "body": [
-            "package ${1:com.example.demo.config};",
-            "",
-            "import org.springframework.context.annotation.Bean;",
-            "import org.springframework.context.annotation.Configuration;",
-            "",
-            "@Configuration",
-            "public class ${2:AppConfig} {",
-            "",
-            "    // Example bean",
-            "    @Bean",
-            "    public ${3:MyService} ${4:myService}() {",
-            "        return new ${3:MyService}();",
-            "    }",
-            "",
-            "    // TODO: Add more beans as needed",
-            "}"
-        ]
-    },
+  "Spring Configuration Class": {
+    "scope": "java",
+    "prefix": "spring:config",
+    "description": "Create a Spring @Configuration class with example beans",
+    "body": [
+      "package ${1:com.example.demo.config};",
+      "",
+      "import org.springframework.context.annotation.Bean;",
+      "import org.springframework.context.annotation.Configuration;",
+      "",
+      "@Configuration",
+      "public class ${2:AppConfig} {",
+      "",
+      "    // Example bean",
+      "    @Bean",
+      "    public ${3:MyService} ${4:myService}() {",
+      "        return new ${3:MyService}();",
+      "    }",
+      "",
+      "    // TODO: Add more beans as needed",
+      "}"
+    ]
+  },
 
-    "Create WebMvc Routes Config": {
-        "scope": "java",
-        "prefix": "cors-config",
-        "description": "Create a Spring @Configuration method for configuring routes (WebMvcConfigurer)",
-        "body": [
-            "package ${1:com.example.demo.config};",
-            "",
-            "import org.springframework.context.annotation.Configuration;",
-            "import org.springframework.web.servlet.config.annotation.CorsRegistry;",
-            "import org.springframework.web.servlet.config.annotation.InterceptorRegistry;",
-            "import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;",
-            "",
-            "@Configuration",
-            "public class ${2:WebMvcConfig} implements WebMvcConfigurer {",
-            "",
-            "    // Configure CORS for your API endpoints",
-            "    @Override",
-            "    public void addCorsMappings(CorsRegistry registry) {",
-            "        registry.addMapping(\"/${3:api/**}\")",
-            "                .allowedOrigins(\"${4:http://localhost:3000}\")",
-            "                .allowedMethods(\"GET\", \"POST\", \"PUT\", \"DELETE\")",
-            "                .allowedHeaders(\"*\");",
-            "    }",
-            "",
-            "    // Configure interceptors if needed",
-            "    @Override",
-            "    public void addInterceptors(InterceptorRegistry registry) {",
-            "        // Example: registry.addInterceptor(new ${5:MyInterceptor}());",
-            "    }",
-            "",
-            "    // TODO: Add more route configurations as needed",
-            "}"
-        ]
-    },
+  "Spring WebMvcConfigurer Class": {
+    "scope": "java",
+    "prefix": "spring:webmvc",
+    "description": "Create a Spring @Configuration class implementing WebMvcConfigurer for CORS and interceptors",
+    "body": [
+      "package ${1:com.example.demo.config};",
+      "",
+      "import org.springframework.context.annotation.Configuration;",
+      "import org.springframework.web.servlet.config.annotation.CorsRegistry;",
+      "import org.springframework.web.servlet.config.annotation.InterceptorRegistry;",
+      "import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;",
+      "",
+      "@Configuration",
+      "public class ${2:WebMvcConfig} implements WebMvcConfigurer {",
+      "",
+      "    // Configure CORS for your API endpoints",
+      "    @Override",
+      "    public void addCorsMappings(CorsRegistry registry) {",
+      "        registry.addMapping(\"/${3:api/**}\")",
+      "                .allowedOrigins(\"${4:http://localhost:3000}\")",
+      "                .allowedMethods(\"GET\", \"POST\", \"PUT\", \"DELETE\")",
+      "                .allowedHeaders(\"*\");",
+      "    }",
+      "",
+      "    // Configure interceptors if needed",
+      "    @Override",
+      "    public void addInterceptors(InterceptorRegistry registry) {",
+      "        // Example: registry.addInterceptor(new ${5:MyInterceptor}());",
+      "    }",
+      "",
+      "    // TODO: Add more route configurations as needed",
+      "}"
+    ]
+  },
 
-    "Create Spring Security Config": {
-        "scope": "java",
-        "prefix": "security-config",
-        "description": "Configuración básica de Spring Security",
-        "body": [
-            "@Configuration",
-            "@EnableWebSecurity",
-            "public class SecurityConfig {",
-            "",
-            "    @Bean",
-            "    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {",
-            "        http",
-            "            .csrf(csrf -> csrf.disable())",
-            "            .authorizeHttpRequests(auth -> auth",
-            "                .requestMatchers(\"/public/**\").permitAll()",
-            "                .anyRequest().authenticated()",
-            "            );",
-            "",
-            "        return http.build();",
-            "    }",
-            "}"
-        ],
-    },
-    
+  "Spring Security Configuration": {
+    "scope": "java",
+    "prefix": "spring:security",
+    "description": "Create a basic Spring Security configuration class with HttpSecurity",
+    "body": [
+      "@Configuration",
+      "@EnableWebSecurity",
+      "public class SecurityConfig {",
+      "",
+      "    @Bean",
+      "    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {",
+      "        http",
+      "            .csrf(csrf -> csrf.disable())",
+      "            .authorizeHttpRequests(auth -> auth",
+      "                .requestMatchers(\"/public/**\").permitAll()",
+      "                .anyRequest().authenticated()",
+      "            );",
+      "",
+      "        return http.build();",
+      "    }",
+      "}"
+    ]
+  }
 }

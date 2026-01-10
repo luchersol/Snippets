@@ -1,0 +1,25 @@
+{
+    "Java Read File (BufferedReader)": {
+        "scope": "java",
+        "prefix": "file:read",
+        "description": "Read a text file line by line using BufferedReader",
+        "body": [
+            "BufferedReader br = new BufferedReader(new FileReader(\"$1\"));",
+            "String line;",
+            "while ((line = br.readLine()) != null) {",
+            "    System.out.println(line);",
+            "}",
+            "br.close();"
+        ]
+    },
+    "Java Write File (BufferedWriter)": {
+        "scope": "java",
+        "prefix": "file:write",
+        "description": "Write text to a file using BufferedWriter",
+        "body": [
+            "BufferedWriter bw = new BufferedWriter(new FileWriter(\"$1\"));",
+            "bw.write(\"$2\");",
+            "bw.close();"
+        ]
+    }
+}

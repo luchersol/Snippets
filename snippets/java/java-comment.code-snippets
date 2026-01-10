@@ -1,34 +1,26 @@
 {
-    "Line" : {
+    "Java Comment Divider Line": {
         "scope": "java",
-        "prefix": "line",
-        "description": "Create a commented line.",
-        "body": [
-            "// ---------------------------------------------------------"
-        ],
+        "prefix": "cmt:line",
+        "description": "Insert a horizontal comment divider line",
+        "body": "// ---------------------------------------------------------"
     },
-    "Section" : {
+    "Java Comment Section Header": {
         "scope": "java",
-        "prefix": "section",
-        "description": "Create a commented line with a placeholder to indicate a section.",
-        "body": [
-            "// ------------------------- $1 -----------------------------",
-        ],
+        "prefix": "cmt:section",
+        "description": "Insert a commented section header with a custom title",
+        "body": "// ------------------------- $1 -----------------------------"
     },
-    "TODO" : {
+    "Java TODO Comment": {
         "scope": "java",
-        "prefix": "TODO, todo",
-        "description": "Create a TODO commented line",
-        "body": [
-            "// TODO: $1"
-        ]
+        "prefix": "cmt:todo",
+        "description": "Insert a TODO comment",
+        "body": "// TODO: $1"
     },
-    "FIXME" : {
+    "Java FIXME Comment": {
         "scope": "java",
-        "prefix": "FIXME, fixme",
-        "description": "Create a FIXME commented line",
-        "body": [
-            "// FIXME: $1"
-        ]
+        "prefix": "cmt:fixme",
+        "description": "Insert a FIXME comment indicating a problem to fix",
+        "body": "// FIXME: $1"
     }
 }

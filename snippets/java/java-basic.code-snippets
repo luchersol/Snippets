@@ -1,0 +1,44 @@
+{
+    "Java Basic Variable Declaration": {
+        "scope": "java",
+        "prefix": "var:basic",
+        "description": "Declare a basic Java variable with common primitive and String types",
+        "body": "${1|int,long,double,float,char,String|} ${2|x,num,text|} = $3;"
+    },
+    "Java Array Literal Initialization": {
+        "scope": "java",
+        "prefix": "arr:literal",
+        "description": "Create and initialize an array with predefined values",
+        "body": "$1[] ${2:array} = {$3};"
+    },
+    "Java Array Declaration": {
+        "scope": "java",
+        "prefix": "arr:declare",
+        "description": "Declare an array without initialization",
+        "body": "$1[] ${2:array};"
+    },
+    "Java Array Allocation": {
+        "scope": "java",
+        "prefix": "arr:new",
+        "description": "Create an empty array with a fixed size using new",
+        "body": "$1[] ${2:array} = new $1[$3];"
+    },
+    "Java Date Current Time (Legacy)": {
+        "scope": "java",
+        "prefix": "date:now",
+        "body": "Date now = new Date();",
+        "description": "Create a Date instance with the current date and time (legacy API)"
+    },
+    "Java LocalDate Today": {
+        "scope": "java",
+        "prefix": "localdate:now",
+        "body": "LocalDate now = LocalDate.now();",
+        "description": "Get the current date using LocalDate (java.time)"
+    },
+    "Java LocalDateTime Now": {
+        "scope": "java",
+        "prefix": "localdatetime:now",
+        "body": "LocalDateTime now = LocalDateTime.now();",
+        "description": "Get the current date and time using LocalDateTime (java.time)"
+    },
+}
