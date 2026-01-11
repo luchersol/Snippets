@@ -1,0 +1,92 @@
+{
+    "JS Simple Class": {
+        "scope": "javascript,typescript",
+        "prefix": "class:simple",
+        "description": "Create a simple JS class with one attribute",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tconstructor(${2:attr}) {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tprint() {",
+            "\t\tconsole.log('$2:', this.$2);",
+            "\t}",
+            "}"
+        ]
+    },
+
+    "JS Class with Methods": {
+        "scope": "javascript,typescript",
+        "prefix": "class:methods",
+        "description": "Create a JS class with multiple methods",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tconstructor(${2:attr}) {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tget${2/(.*)/${1:/capitalize}/}() {",
+            "\t\treturn this.$2;",
+            "\t}",
+            "",
+            "\tset${2/(.*)/${1:/capitalize}/}($2) {",
+            "\t\tthis.$2 = $2;",
+            "\t}",
+            "",
+            "\tdisplay() {",
+            "\t\tconsole.log('$2:', this.$2);",
+            "\t}",
+            "}"
+        ]
+    },
+
+    "JS Class Inheritance": {
+        "scope": "javascript,typescript",
+        "prefix": "class:extend",
+        "description": "Create a JS class that extends a parent class",
+        "body": [
+            "class ${2:ChildClass} extends ${1:ParentClass} {",
+            "\tconstructor(${3:args}) {",
+            "\t\tsuper($3);",
+            "\t\t${4:// child attributes here}",
+            "\t}",
+            "",
+            "\t${5:childMethod()} {",
+            "\t\t${6:// TODO: implement method}",
+            "\t}",
+            "}"
+        ]
+    },
+    "JS Class Static Methods": {
+        "scope": "javascript,typescript",
+        "prefix": "method:static",
+        "description": "Create a JS class static method",
+        "body": [
+            "static ${3:staticMethod}(${4:args}) {",
+            "\t${5:// TODO: implement static method}",
+            "}",
+        ]
+    },
+
+    "JS Class Getter and Setter": {
+        "scope": "javascript,typescript",
+        "prefix": "class:getset",
+        "description": "Create a JS class with getter and setter methods",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tconstructor(${2:attr}) {",
+            "\t\tthis._$2 = $2;",
+            "\t}",
+            "",
+            "\tget $2() {",
+            "\t\treturn this._$2;",
+            "\t}",
+            "",
+            "\tset $2(value) {",
+            "\t\tthis._$2 = value;",
+            "\t}",
+            "}"
+        ]
+    }
+}

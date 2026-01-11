@@ -37,7 +37,7 @@
         "scope": "javascript",
         "prefix": "debug:var",
         "description": "Print variable name and value for debugging",
-        "body": "console.log(\"${1:var} =\", ${1});"
+        "body": "console.log(\"${1:var} =\", $1);"
     },
     "JavaScript Console Separator": {
         "scope": "javascript",

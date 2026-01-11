@@ -49,7 +49,7 @@
         "scope": "java",
         "prefix": "debug:var",
         "description": "Print variable name and value for debugging",
-        "body": "System.out.println(\"${1:var} = \" + ${1});"
+        "body": "System.out.println(\"${1:var} = \" + $1);"
     },
     "Java Console Separator": {
         "scope": "java",

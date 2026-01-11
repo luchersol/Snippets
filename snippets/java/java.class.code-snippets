@@ -1,0 +1,55 @@
+{
+    "Java Class Inheritance": {
+        "scope": "java",
+        "prefix": "class:extend",
+        "description": "Base class and derived class showing inheritance and override",
+        "body": [
+            "public class ${2:MyClass} extends ${1:MyExtendClass} {",
+            "",
+            "}"
+        ]
+    },
+    "Java Class Implements Interface": {
+        "scope": "java",
+        "prefix": "class:implements",
+        "description": "Create a class that implements an interface",
+        "body": [
+            "public class ${2:MyClass} implements ${1:MyInterface} {",
+            "\t${3:// TODO: implement interface methods}",
+            "}"
+        ]
+    },
+    "Java Generic Class": {
+        "scope": "java",
+        "prefix": "class:generic",
+        "description": "Create a generic class with type parameter",
+        "body": [
+            "public class ${1:MyClass}<${2:T}> {",
+            "\tprivate $2 ${3:value};",
+            "",
+            "\tpublic $1($2 $3) {",
+            "\t\tthis.$3 = $3;",
+            "\t}",
+            "",
+            "\tpublic $2 get${3/(.*)/${1:/capitalize}/}() {",
+            "\t\treturn $3;",
+            "\t}",
+            "",
+            "\tpublic void set${3/(.*)/${1:/capitalize}/}($2 $3) {",
+            "\t\tthis.$3 = $3;",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Method Override": {
+        "scope": "java",
+        "prefix": "method:override",
+        "description": "Override a method from a superclass or interface",
+        "body": [
+            "@Override",
+            "public ${1:void} ${2:methodName}($3) {",
+            "\t${4:// TODO: implement method}",
+            "}"
+        ]
+    }
+}

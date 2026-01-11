@@ -1,0 +1,154 @@
+{
+    "Python Simple Class": {
+        "scope": "python",
+        "prefix": "class:simple",
+        "description": "Create a simple Python class with attributes",
+        "body": [
+            "class ${1:MyClass}:",
+            "\t${2:attribute} = ${3:None}",
+            "",
+            "\tdef __init__(self, ${2:attribute}):",
+            "\t\tself.$2 = $2",
+            "",
+            "\tdef __str__(self):",
+            "\t\treturn f\"$2: {self.$2}\""
+        ]
+    },
+
+    "Python Class with Methods": {
+        "scope": "python",
+        "prefix": "class:methods",
+        "description": "Create a Python class with multiple methods",
+        "body": [
+            "class ${1:MyClass}:",
+            "\tdef __init__(self, ${2:attribute}):",
+            "\t\tself.$2 = $2",
+            "",
+            "\tdef get_$2(self):",
+            "\t\treturn self.$2",
+            "",
+            "\tdef set_$2(self, $2):",
+            "\t\tself.$2 = $2",
+            "",
+            "\tdef display(self):",
+            "\t\tprint(f\"$2: {self.$2}\")"
+        ]
+    },
+
+    "Python Class Inheritance": {
+        "scope": "python",
+        "prefix": "class:inherit",
+        "description": "Create a Python class that inherits from a parent class",
+        "body": [
+            "class ${2:ChildClass}(${1:ParentClass}):",
+            "\tdef __init__(self, ${3:args}):",
+            "\t\tsuper().__init__($3)",
+            "\t\t${4:# child attributes here}",
+            "",
+            "\t${5:def child_method(self):}",
+            "\t\t${6:pass}"
+        ]
+    },
+
+    "Python Generic Class": {
+        "scope": "python",
+        "prefix": "class:generic",
+        "description": "Create a Python generic class using type hints",
+        "body": [
+            "from typing import Generic, TypeVar",
+            "",
+            "T = TypeVar('T')",
+            "",
+            "class ${1:MyClass}(Generic[T]):",
+            "\tdef __init__(self, value: T):",
+            "\t\tself.value: T = value",
+            "",
+            "\tdef get_value(self) -> T:",
+            "\t\treturn self.value",
+            "",
+            "\tdef set_value(self, value: T) -> None:",
+            "\t\tself.value = value"
+        ]
+    },
+
+    "Python Property": {
+        "scope": "python",
+        "prefix": "class:property",
+        "description": "Create a property with getter and setter",
+        "body": [
+            "class ${1:MyClass}:",
+            "\tdef __init__(self, ${2:attr}):",
+            "\t\tself._$2 = $2",
+            "",
+            "\t@property",
+            "\tdef $2(self):",
+            "\t\treturn self._$2",
+            "",
+            "\t@$2.setter",
+            "\tdef $2(self, value):",
+            "\t\tself._$2 = value"
+        ]
+    },
+
+    "Python Static and Class Methods": {
+        "scope": "python",
+        "prefix": "class:staticclass",
+        "description": "Create static and class methods in a Python class",
+        "body": [
+            "class ${1:MyClass}:",
+            "\t@staticmethod",
+            "\tdef ${2:static_method}(${3:args}):",
+            "\t\t${4:pass}",
+            "",
+            "\t@classmethod",
+            "\tdef ${5:class_method}(cls, ${6:args}):",
+            "\t\t${7:pass}"
+        ]
+    },
+
+    "Python Abstract Class": {
+        "scope": "python",
+        "prefix": "class:abstract",
+        "description": "Create an abstract class using ABC",
+        "body": [
+            "from abc import ABC, abstractmethod",
+            "",
+            "class ${1:MyAbstractClass}(ABC):",
+            "\t@abstractmethod",
+            "\tdef ${2:abstract_method}(self, ${3:args}):",
+            "\t\tpass"
+        ]
+    },
+
+    "Python Special Methods": {
+        "scope": "python",
+        "prefix": "class:special",
+        "description": "Create a class with __repr__ and __eq__ special methods",
+        "body": [
+            "class ${1:MyClass}:",
+            "\tdef __init__(self, ${2:attr}):",
+            "\t\tself.$2 = $2",
+            "",
+            "\tdef __repr__(self):",
+            "\t\treturn f\"$1($2={self.$2})\"",
+            "",
+            "\tdef __eq__(self, other):",
+            "\t\tif isinstance(other, $1):",
+            "\t\t\treturn self.$2 == other.$2",
+            "\t\treturn False"
+        ]
+    },
+
+    "Python Dataclass": {
+        "scope": "python",
+        "prefix": "class:dataclass",
+        "description": "Create a dataclass in Python",
+        "body": [
+            "from dataclasses import dataclass",
+            "",
+            "@dataclass",
+            "class ${1:MyClass}:",
+            "\t${2:attr}: ${3:type} = ${4:None}"
+        ]
+    }
+}

@@ -3,7 +3,7 @@
         "scope": "javascript",
         "prefix": "arr:literal",
         "description": "Create and initialize an array with predefined values",
-        "body": "const ${1:array} = [${2}];"
+        "body": "const ${1:array} = [$2];"
     },
     "JavaScript Array Declaration": {
         "scope": "javascript",
@@ -23,8 +23,8 @@
         "description": "Create and initialize a 2D array with predefined values",
         "body": [
             "const ${1:matrix} = [",
-            "\t[${2}],",
-            "\t[${3}]",
+            "\t[$2],",
+            "\t[$3]",
             "];"
         ]
     },
@@ -74,8 +74,8 @@
         "description": "Search using a boolean flag and break",
         "body": [
             "let found = false;",
-            "for (${1}) {",
-            "\tif (${2}) {",
+            "for ($1) {",
+            "\tif ($2) {",
             "\t\tfound = true;",
             "\t\tbreak;",
             "\t}",
@@ -88,8 +88,8 @@
         "description": "Conditional counter pattern",
         "body": [
             "let ${1:count} = 0;",
-            "for (${2}) {",
-            "\tif (${3}) $1++;",
+            "for ($2) {",
+            "\tif ($3) $1++;",
             "}"
         ]
     },

@@ -9,7 +9,7 @@
         "scope": "javascript",
         "prefix": "list:of",
         "description": "Create a new list initialized with values",
-        "body": "const ${1:list} = [${2}];"
+        "body": "const ${1:list} = [$2];"
     },
     "JavaScript Sorted Set Declaration (Empty)": {
         "scope": "javascript",
@@ -27,7 +27,7 @@
         "scope": "javascript",
         "prefix": "sorted-set:of",
         "description": "Create a new insertion-ordered set with values",
-        "body": "const ${1:set} = new Set([${2}]);"
+        "body": "const ${1:set} = new Set([$2]);"
     },
     "JavaScript Set Declaration (Empty)": {
         "scope": "javascript",
@@ -39,7 +39,7 @@
         "scope": "javascript",
         "prefix": "set:of",
         "description": "Create a new set initialized with values",
-        "body": "const ${1:set} = new Set([${2}]);"
+        "body": "const ${1:set} = new Set([$2]);"
     },
     "JavaScript Map Declaration (Empty)": {
         "scope": "javascript",
@@ -63,7 +63,7 @@
         "scope": "javascript",
         "prefix": "opt:of",
         "description": "Represent an optional value",
-        "body": "const ${1:value} = ${2};"
+        "body": "const ${1:value} = $2;"
     },
     "JavaScript Queue Declaration (Empty)": {
         "scope": "javascript",
@@ -75,7 +75,7 @@
         "scope": "javascript",
         "prefix": "queue:of",
         "description": "Create a new queue initialized with values",
-        "body": "const ${1:queue} = [${2}];"
+        "body": "const ${1:queue} = [$2];"
     },
     "JavaScript Deque Declaration (Empty)": {
         "scope": "javascript",
@@ -87,6 +87,6 @@
         "scope": "javascript",
         "prefix": "deque:of",
         "description": "Create a new deque initialized with values",
-        "body": "const ${1:deque} = [${2}];"
+        "body": "const ${1:deque} = [$2];"
     }
 }

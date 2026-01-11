@@ -74,8 +74,8 @@
         "description": "Search using a boolean flag and break",
         "body": [
             "boolean found = false;",
-            "for (${1}) {",
-            "\tif (${2}) {",
+            "for ($1) {",
+            "\tif ($2) {",
             "\t\tfound = true;",
             "\t\tbreak;",
             "\t}",
@@ -88,8 +88,8 @@
         "description": "Conditional counter pattern",
         "body": [
             "int ${1:count} = 0;",
-            "for (${2}) {",
-            "\tif (${3}) $1++;",
+            "for ($2) {",
+            "\tif ($3) $1++;",
             "}"
         ]
     },

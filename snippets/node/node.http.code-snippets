@@ -11,7 +11,7 @@
             "\tres.end('${1:Hello World}\\n');",
             "});",
             "server.listen(${2:3000}, '${3:localhost}', () => {",
-            "\tconsole.log(`Server running at http://${3}:${2}/`);",
+            "\tconsole.log(`Server running at http://$3:$2/`);",
             "});"
         ]
     }
