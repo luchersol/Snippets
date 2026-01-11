@@ -1,0 +1,40 @@
+{
+    "Python Simple Decorator": {
+        "scope": "python",
+        "prefix": "decorator:simple",
+        "description": "Create a simple Python decorator",
+        "body": [
+            "def ${1:decorator_name}(func):",
+            "\tdef wrapper(*args, **kwargs):",
+            "\t\t${2:# Code before calling the function}",
+            "\t\tresult = func(*args, **kwargs)",
+            "\t\t${3:# Code after calling the function}",
+            "\t\treturn result",
+            "\treturn wrapper",
+            "",
+            "@${1:decorator_name}",
+            "def ${4:function_name}():",
+            "\t${5:pass}"
+        ]
+    },
+    "Python Decorator With Parameters": {
+        "scope": "python",
+        "prefix": "decorator:param",
+        "description": "Create a Python decorator that accepts parameters",
+        "body": [
+            "def ${1:decorator_name}(param):",
+            "\tdef decorator(func):",
+            "\t\tdef wrapper(*args, **kwargs):",
+            "\t\t\t${2:# Code using the parameter}",
+            "\t\t\tresult = func(*args, **kwargs)",
+            "\t\t\t${3:# Code after calling the function}",
+            "\t\t\treturn result",
+            "\t\treturn wrapper",
+            "\treturn decorator",
+            "",
+            "@${1:decorator_name}(${4:'parameter_value'})",
+            "def ${5:function_name}(*args, **kwargs):",
+            "\t${6:pass}"
+        ]
+    }
+}
