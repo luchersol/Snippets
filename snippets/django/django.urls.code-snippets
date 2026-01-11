@@ -12,5 +12,12 @@
             "\tpath('${2:path}/', ${1:ViewName}.as_view(), name='${3:name}'),",
             "]"
         ]
+    },
+    "Django URL Include": {
+        "scope": "python",
+        "prefix": "dj:url:include",
+        "isFileTemplate": false,
+        "description": "Include URLs from another app",
+        "body": "path('${1:app}/', include('${1:app}.urls')),"
     }
 }

@@ -18,5 +18,16 @@
             "\t\t${4:# Add validation here}",
             "\t\treturn data"
         ]
+    },
+    "Django Form Clean All": {
+        "scope": "python",
+        "prefix": "dj:form:clean_all",
+        "description": "Custom clean() method for the form",
+        "body": [
+            "def clean(self):",
+            "\tcleaned_data = super().clean()",
+            "\t${1:# Add global form validation}",
+            "\treturn cleaned_data"
+        ]
     }
 }

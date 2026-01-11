@@ -13,5 +13,20 @@
             "\t\tmodel = ${1:ModelName}",
             "\t\tfields = '__all__'"
         ]
+    },
+    "DRF ModelViewSet": {
+        "scope": "python",
+        "prefix": "dj:api:viewset",
+        "isFileTemplate": true,
+        "description": "Basic ModelViewSet for DRF",
+        "body": [
+            "from rest_framework import viewsets",
+            "from .models import ${1:ModelName}",
+            "from .serializers import ${1:ModelName}Serializer",
+            "",
+            "class ${1:ModelName}ViewSet(viewsets.ModelViewSet):",
+            "\tqueryset = ${1:ModelName}.objects.all()",
+            "\tserializer_class = ${1:ModelName}Serializer"
+        ]
     }
 }

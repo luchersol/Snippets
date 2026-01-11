@@ -16,5 +16,61 @@
             "\tdef __str__(self):",
             "\t\treturn self.${2:field_name}"
         ]
+    },
+    "Django Model SlugField": {
+        "scope": "python",
+        "prefix": "dj:model:slug",
+        "description": "Add a SlugField to a model with automatic save() generation",
+        "body": [
+            "slug = models.SlugField(unique=True, blank=True)",
+            "",
+            "def save(self, *args, **kwargs):",
+            "\tif not self.slug:",
+            "\t\tfrom django.utils.text import slugify",
+            "\t\tself.slug = slugify(self.${1:name_field})",
+            "\tsuper().save(*args, **kwargs)"
+        ]
+    },
+    "Django Model Choices Field": {
+        "scope": "python",
+        "prefix": "dj:model:choices",
+        "description": "Add a field with choices to a model",
+        "body": [
+            "${1:status} = models.CharField(",
+            "\tmax_length=20,",
+            "\tchoices=[('${2:draft}','Draft'), ('${3:published}','Published')],",
+            "\tdefault='${2:draft}'",
+            ")"
+        ]
+    },
+    "Django Model ForeignKey": {
+        "scope": "python",
+        "prefix": "dj:model:fk",
+        "description": "Add a ForeignKey field to a model",
+        "body": [
+            "${1:user} = models.ForeignKey(",
+            "\t'${2:AppName.ModelName}',",
+            "\ton_delete=models.CASCADE",
+            ")"
+        ]
+    },
+    "Django Model ManyToManyField": {
+        "scope": "python",
+        "prefix": "dj:model:m2m",
+        "description": "Add a ManyToManyField to a model",
+        "body": [
+            "${1:tags} = models.ManyToManyField('${2:Tag}')"
+        ]
+    },
+    "Django Model Property": {
+        "scope": "python",
+        "prefix": "dj:model:property",
+        "description": "Add a computed property to a Django model",
+        "body": [
+            "@property",
+            "def ${1:property_name}(self):",
+            "\t${2:# compute value}",
+            "\treturn ${3:value}"
+        ]
     }
 }

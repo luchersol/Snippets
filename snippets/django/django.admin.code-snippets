@@ -14,5 +14,19 @@
             "\tsearch_fields = (${3:'field1', 'field2'})",
             "\tlist_filter = (${4:'created', 'updated'})"
         ]
+    },
+    "Django Admin Inline": {
+        "scope": "python",
+        "prefix": "dj:admin:inline",
+        "isFileTemplate": true,
+        "description": "Inline model admin snippet",
+        "body": [
+            "from django.contrib import admin",
+            "from .models import ${1:ChildModel}",
+            "",
+            "class ${1:ChildModel}Inline(admin.TabularInline):",
+            "\tmodel = ${1:ChildModel}",
+            "\textra = 1"
+        ]
     }
 }
