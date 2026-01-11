@@ -1,1 +1,6 @@
-A curated collection of VS Code snippets, templates, and configurations designed to boost developer productivity. Includes ready-to-use code snippets for making it easier for developers to write clean, efficient, and consistent code.
+# Project Name
+
+Read more in your language:
+
+- [English](docs/en/README.md)
+- [Español](docs/es/README.md)
