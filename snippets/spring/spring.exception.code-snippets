@@ -1,7 +1,7 @@
 {
   "Spring Global Exception Handler": {
     "scope": "java",
-    "prefix": "spring:exhandler",
+    "prefix": "spring:exhandler:global",
     "isFileTemplate": true,
     "description": "Create a global exception handler using @ControllerAdvice with example methods",
     "body": [
@@ -32,7 +32,7 @@
 
   "Spring Exception Handler Method": {
     "scope": "java",
-    "prefix": "spring:exhandler-method",
+    "prefix": "spring:exhandler:method",
     "description": "Create a single @ExceptionHandler method for a controller or advice",
     "body": [
       "\t@ExceptionHandler(${1:Exception.class})",

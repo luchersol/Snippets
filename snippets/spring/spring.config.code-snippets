@@ -37,7 +37,7 @@
 
   "Spring WebMvcConfigurer Class": {
     "scope": "java",
-    "prefix": "spring:webmvc",
+    "prefix": "spring:config:webmvc",
     "description": "Create a Spring @Configuration class implementing WebMvcConfigurer for CORS and interceptors",
     "body": [
       "package ${1:com.example.demo.config};",
@@ -72,7 +72,7 @@
 
   "Spring Security Configuration": {
     "scope": "java",
-    "prefix": "spring:security",
+    "prefix": "spring:config:routes",
     "description": "Create a basic Spring Security configuration class with HttpSecurity",
     "body": [
       "@Configuration",
