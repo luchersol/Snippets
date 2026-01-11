@@ -9,7 +9,25 @@
         "scope": "java",
         "prefix": "list:of",
         "description": "Create a new List initialized with values",
-        "body": "List<${1:String}> ${2:list} = new ArrayList<>(Arrays.asList(${3:/* values */}));"
+        "body": "List<${1:String}> ${2:list} = new ArrayList<>(List.of(${3:/* values */}));"
+    },
+    "Java Sorted Set Declaration (Empty)": {
+        "scope": "java",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty Set using TreeSet",
+        "body": "Set<${1:String}> ${2:set} = new TreeSet<>(Comparator.${3|naturalOrder(),reverseOrder(),comparing(/* keyExtractor */)|});"
+    },
+    "Java Insertion-Sorted Set Declaration (Empty)": {
+        "scope": "java",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty Set using LinkedHashSet",
+        "body": "Set<${1:String}> ${2:set} = new LinkedHashSet<>();"
+    },
+    "Java Insertion-Sorted Set Declaration with Values": {
+        "scope": "java",
+        "prefix": "sorted-set:new",
+        "description": "Create a new empty Set using LinkedHashSet",
+        "body": "Set<${1:String}> ${2:set} = new LinkedHashSet<>(List.of(/* values */));"
     },
     "Java Set Declaration (Empty)": {
         "scope": "java",

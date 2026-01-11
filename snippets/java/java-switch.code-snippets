@@ -1,7 +1,7 @@
 {
     "Java Switch Expression Basic": {
         "scope": "java",
-        "prefix": "switchx",
+        "prefix": "switch:expr",
         "description": "Modern switch expression that returns a value",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
@@ -13,7 +13,7 @@
     },
     "Java Switch Multiple Cases": {
         "scope": "java",
-        "prefix": "switchm",
+        "prefix": "switch:multi",
         "description": "Modern switch with multiple labels in a single case",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
@@ -25,7 +25,7 @@
     },
     "Java Switch With Yield": {
         "scope": "java",
-        "prefix": "switchy",
+        "prefix": "switch:yield",
         "description": "Switch expression using blocks and yield",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
@@ -44,7 +44,7 @@
     },
     "Java Switch Flow Control Only": {
         "scope": "java",
-        "prefix": "switchf",
+        "prefix": "switch:flow",
         "description": "Modern switch used only for control flow (no return value)",
         "body": [
             "switch (${1:value}) {",
@@ -56,7 +56,7 @@
     },
     "Java Switch With Null (Java 21+)": {
         "scope": "java",
-        "prefix": "switchnull",
+        "prefix": "switch:null",
         "description": "Modern switch that explicitly handles null (Java 21+)",
         "body": [
             "var ${1:result} = switch (${2:value}) {",
@@ -68,7 +68,7 @@
     },
     "Java Switch With Enum": {
         "scope": "java",
-        "prefix": "switchenum",
+        "prefix": "switch:enum",
         "description": "Switch expression using enum values (no default required)",
         "body": [
             "return switch (${1:enumValue}) {",
@@ -80,7 +80,7 @@
     },
     "Java Switch Pattern Matching (Java 21+)": {
         "scope": "java",
-        "prefix": "switchpm",
+        "prefix": "switch:pattern",
         "description": "Switch expression with pattern matching by type (Java 21+)",
         "body": [
             "return switch (${1:obj}) {",
@@ -93,7 +93,7 @@
     },
     "Java Switch Expression Short": {
         "scope": "java",
-        "prefix": "switch1",
+        "prefix": "switch:short",
         "description": "Short switch expression with one case and default",
         "body": [
             "return switch (${1:value}) {",
@@ -101,5 +101,5 @@
             "    default -> ${4:resultDefault};",
             "};"
         ]
-    },
+    }
 }
