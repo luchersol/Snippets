@@ -13,10 +13,16 @@
             "]"
         ]
     },
+    "Django URL to View": {
+        "scope": "python",
+        "prefix": "dj:url:view",
+        "isFileTemplate": false,
+        "description": "Simple path to a view with optional name",
+        "body": "path('${1:path}/', ${2:views.${3:view_name}}, name='${4:name}')"
+    },
     "Django URL Include": {
         "scope": "python",
         "prefix": "dj:url:include",
-        "isFileTemplate": false,
         "description": "Include URLs from another app",
         "body": "path('${1:app}/', include('${1:app}.urls')),"
     }
