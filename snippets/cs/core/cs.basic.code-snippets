@@ -1,0 +1,77 @@
+{
+    "C# Basic Variable Declaration": {
+        "scope": "csharp",
+        "prefix": "var:basic",
+        "description": "Declare a basic C# variable with var or common types",
+        "body": "${1|var,int,float,double,char,string|} ${2|x,num,text|} = $3;"
+    },
+    "C# Constant": {
+        "scope": "csharp",
+        "prefix": "var:const",
+        "description": "Const variable",
+        "body": "const ${1:int} ${2:CONSTANT} = $3;"
+    },
+    "C# Class Declaration": {
+        "scope": "csharp",
+        "prefix": "class:decl",
+        "description": "Declare a basic class",
+        "body": [
+            "public class ${1:MyClass} {",
+            "\tpublic ${1:MyClass}() {",
+            "\t\t$2",
+            "\t}",
+            "\tpublic void ${3:Method}() {",
+            "\t\t$4",
+            "\t}",
+            "}"
+        ]
+    },
+    "C# Property": {
+        "scope": "csharp",
+        "prefix": "prop",
+        "description": "Auto-implemented property",
+        "body": "public ${1:int} ${2:Property} { get; set; }"
+    },
+    "C# If Statement": {
+        "scope": "csharp",
+        "prefix": "if",
+        "description": "Basic if statement",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "}"
+        ]
+    },
+    "C# For Loop": {
+        "scope": "csharp",
+        "prefix": "for",
+        "description": "Basic for loop",
+        "body": [
+            "for (${1:int i = 0}; ${2:i < 10}; ${3:i++}) {",
+            "\t$4",
+            "}"
+        ]
+    },
+    "C# Foreach Loop": {
+        "scope": "csharp",
+        "prefix": "foreach",
+        "description": "Foreach loop",
+        "body": [
+            "foreach (var ${1:item} in ${2:collection}) {",
+            "\t$3",
+            "}"
+        ]
+    },
+    "C# Console WriteLine": {
+        "scope": "csharp",
+        "prefix": "cw",
+        "description": "Console.WriteLine",
+        "body": "Console.WriteLine(\"${1:Hello World}\");"
+    },
+    "C# Console ReadLine": {
+        "scope": "csharp",
+        "prefix": "cr",
+        "description": "Console.ReadLine",
+        "body": "${1:string} ${2:input} = Console.ReadLine();"
+    }
+}

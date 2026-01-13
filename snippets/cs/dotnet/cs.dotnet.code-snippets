@@ -1,0 +1,41 @@
+{
+    "C# LINQ Query": {
+        "scope": "csharp",
+        "prefix": "linq:query",
+        "description": "Basic LINQ query",
+        "body": [
+            "var ${1:result} = from ${2:item} in ${3:collection}",
+            "\t\t\t\twhere ${4:condition}",
+            "\t\t\t\tselect ${2:item};"
+        ]
+    },
+    "C# LINQ Method Syntax": {
+        "scope": "csharp",
+        "prefix": "linq:method",
+        "description": "LINQ method syntax",
+        "body": "var ${1:result} = ${2:collection}.Where(${3:x => x.Condition}).Select(${4:x => x});"
+    },
+    "C# Async Method": {
+        "scope": "csharp",
+        "prefix": "async:method",
+        "description": "Async method",
+        "body": [
+            "public async Task<${1:void}> ${2:MethodName}Async() {",
+            "\tawait ${3:Task.Delay(1000)};",
+            "\t$4",
+            "}"
+        ]
+    },
+    "C# Try-Catch": {
+        "scope": "csharp",
+        "prefix": "try",
+        "description": "Try-catch block",
+        "body": [
+            "try {",
+            "\t$1",
+            "} catch (${2:Exception ex}) {",
+            "\t$3",
+            "}"
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "C++ Vector Declaration": {
+        "scope": "cpp",
+        "prefix": "vector:decl",
+        "description": "Declare a std::vector",
+        "body": "std::vector<${1:int}> ${2:vec};"
+    },
+    "C++ Vector Operations": {
+        "scope": "cpp",
+        "prefix": "vector:ops",
+        "description": "Common vector operations",
+        "body": [
+            "${2:vec}.push_back(${1:value});",
+            "for (auto &elem : ${2:vec}) {",
+            "\tstd::cout << elem << std::endl;",
+            "}"
+        ]
+    },
+    "C++ Map Declaration": {
+        "scope": "cpp",
+        "prefix": "map:decl",
+        "description": "Declare a std::map",
+        "body": "std::map<${1:string}, ${2:int}> ${3:map};"
+    },
+    "C++ Smart Pointer": {
+        "scope": "cpp",
+        "prefix": "unique_ptr",
+        "description": "Declare a std::unique_ptr",
+        "body": "std::unique_ptr<${1:MyClass}> ${2:ptr} = std::make_unique<${1:MyClass}>();"
+    },
+    "C++ Lambda": {
+        "scope": "cpp",
+        "prefix": "lambda",
+        "description": "Lambda function",
+        "body": "auto ${1:lambda} = [](${2:int x}) { return ${3:x * 2}; };"
+    }
+}

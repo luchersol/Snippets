@@ -1,0 +1,77 @@
+{
+    "C++ Basic Variable Declaration": {
+        "scope": "cpp",
+        "prefix": "var:basic",
+        "description": "Declare a basic C++ variable with auto or common types",
+        "body": "${1|auto,int,float,double,char,string|} ${2|x,num,text|} = $3;"
+    },
+    "C++ Constant": {
+        "scope": "cpp",
+        "prefix": "var:const",
+        "description": "Const variable",
+        "body": "const ${1:int} ${2:CONSTANT} = $3;"
+    },
+    "C++ Reference": {
+        "scope": "cpp",
+        "prefix": "ref:decl",
+        "description": "Declare a reference",
+        "body": "${1:int} &${2:ref} = ${3:var};"
+    },
+    "C++ Class Declaration": {
+        "scope": "cpp",
+        "prefix": "class:decl",
+        "description": "Declare a basic class",
+        "body": [
+            "class ${1:MyClass} {",
+            "public:",
+            "\t${1:MyClass}();",
+            "\t~${1:MyClass}();",
+            "\tvoid ${2:method}();",
+            "private:",
+            "\t${3:int} ${4:data};",
+            "};"
+        ]
+    },
+    "C++ Constructor": {
+        "scope": "cpp",
+        "prefix": "ctor",
+        "description": "Class constructor",
+        "body": [
+            "${1:MyClass}::${1:MyClass}() {",
+            "\t$2",
+            "}"
+        ]
+    },
+    "C++ If Statement": {
+        "scope": "cpp",
+        "prefix": "if",
+        "description": "Basic if statement",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "}"
+        ]
+    },
+    "C++ For Loop": {
+        "scope": "cpp",
+        "prefix": "for",
+        "description": "Range-based for loop",
+        "body": [
+            "for (auto &${1:element} : ${2:container}) {",
+            "\t$3",
+            "}"
+        ]
+    },
+    "C++ Cout": {
+        "scope": "cpp",
+        "prefix": "cout",
+        "description": "Cout statement",
+        "body": "std::cout << \"${1:Hello World}\" << std::endl;"
+    },
+    "C++ Cin": {
+        "scope": "cpp",
+        "prefix": "cin",
+        "description": "Cin statement",
+        "body": "std::cin >> ${1:variable};"
+    }
+}

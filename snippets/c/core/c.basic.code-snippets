@@ -1,0 +1,74 @@
+{
+    "C Basic Variable Declaration": {
+        "scope": "c",
+        "prefix": "var:basic",
+        "description": "Declare a basic C variable with common types",
+        "body": "${1|int,float,double,char|} ${2|x,num,text|} = $3;"
+    },
+    "C Constant": {
+        "scope": "c",
+        "prefix": "var:const",
+        "description": "Constant using #define",
+        "body": "#define ${1:CONSTANT_NAME} $2"
+    },
+    "C Pointer Declaration": {
+        "scope": "c",
+        "prefix": "ptr:decl",
+        "description": "Declare a pointer variable",
+        "body": "${1|int} *${2:ptr} = $3;"
+    },
+    "C Array Declaration": {
+        "scope": "c",
+        "prefix": "arr:decl",
+        "description": "Declare an array",
+        "body": "${1|int} ${2:arr}[${3:10}];"
+    },
+    "C Function Declaration": {
+        "scope": "c",
+        "prefix": "func:decl",
+        "description": "Declare a function",
+        "body": "${1:void} ${2:function_name}(${3:int param});"
+    },
+    "C If Statement": {
+        "scope": "c",
+        "prefix": "if",
+        "description": "Basic if statement",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "}"
+        ]
+    },
+    "C For Loop": {
+        "scope": "c",
+        "prefix": "for",
+        "description": "Basic for loop",
+        "body": [
+            "for (${1:int i = 0}; ${2:i < 10}; ${3:i++}) {",
+            "\t$4",
+            "}"
+        ]
+    },
+    "C While Loop": {
+        "scope": "c",
+        "prefix": "while",
+        "description": "Basic while loop",
+        "body": [
+            "while (${1:condition}) {",
+            "\t$2",
+            "}"
+        ]
+    },
+    "C Printf": {
+        "scope": "c",
+        "prefix": "printf",
+        "description": "Printf statement",
+        "body": "printf(\"${1:%d}\\n\", ${2:variable});"
+    },
+    "C Scanf": {
+        "scope": "c",
+        "prefix": "scanf",
+        "description": "Scanf statement",
+        "body": "scanf(\"${1:%d}\", &${2:variable});"
+    }
+}

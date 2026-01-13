@@ -1,0 +1,51 @@
+{
+    "C Pointer Operations": {
+        "scope": "c",
+        "prefix": "ptr:ops",
+        "description": "Pointer operations",
+        "body": [
+            "${1:int} *${2:ptr} = &${3:var};",
+            "printf(\"Value: %d\\n\", *${2:ptr});",
+            "*${2:ptr} = ${4:new_value};"
+        ]
+    },
+    "C Dynamic Memory Allocation": {
+        "scope": "c",
+        "prefix": "malloc",
+        "description": "Dynamic memory allocation with malloc",
+        "body": [
+            "${1:int} *${2:arr} = (${1:int}*)malloc(${3:10} * sizeof(${1:int}));",
+            "if (${2:arr} == NULL) {",
+            "\tprintf(\"Memory allocation failed\\n\");",
+            "\treturn 1;",
+            "}",
+            "// Use ${2:arr}",
+            "free(${2:arr});"
+        ]
+    },
+    "C Struct Declaration": {
+        "scope": "c",
+        "prefix": "struct:decl",
+        "description": "Declare a struct",
+        "body": [
+            "typedef struct {",
+            "\t${1:int} ${2:id};",
+            "\tchar ${3:name}[${4:50}];",
+            "} ${5:MyStruct};"
+        ]
+    },
+    "C File I/O": {
+        "scope": "c",
+        "prefix": "file:io",
+        "description": "Basic file I/O operations",
+        "body": [
+            "FILE *${1:fp} = fopen(\"${2:filename.txt}\", \"${3:r}\");",
+            "if (${1:fp} == NULL) {",
+            "\tprintf(\"Error opening file\\n\");",
+            "\treturn 1;",
+            "}",
+            "// Read or write operations",
+            "fclose(${1:fp});"
+        ]
+    }
+}
