@@ -4,10 +4,15 @@ A curated collection of VS Code snippets, templates, and configurations designed
 
 ## Features
 
+### Snippets
+
 - **Snippets organized by language**: Support for Java, JavaScript, Python, and Markdown.
 - **Specialized categories**: Includes snippets for popular frameworks like Spring (Java), Django (Python), Express (Node.js), and more.
 - **Automatic installation**: Python script to install all snippets easily.
-- **Test files**: Usage examples in each supported language.
+
+### Setting
+
+The folder `settings` contains different VS Code settings files, each designed for a specific programming style or workflow. You can switch between them to adapt the editor to your needs without installing any additional extensions.
 
 ## Supported Languages and Frameworks
 
@@ -67,6 +72,7 @@ VSCodeHelpers/
 ├── LICENSE                  # Project license
 ├── README.md                
 ├── docs/                    # Documentation folder by idiom (en, es)
+├── settings/                # Folder with settings for vscode
 └── snippets/                # Main snippets folder
     ├── java/
     │   ├── core/
