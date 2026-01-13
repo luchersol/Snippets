@@ -65,11 +65,8 @@ For example, in a Java file, type `class` and press `Tab` to insert a basic clas
 VSCodeHelpers/
 ├── add-snippets.py          # Script for automatic installation
 ├── LICENSE                  # Project license
-├── README.md                # This file
-├── Test.java                # Test file for Java
-├── Test.js                  # Test file for JavaScript
-├── Test.md                  # Test file for Markdown
-├── Test.py                  # Test file for Python
+├── README.md                
+├── docs/                    # Documentation folder by idiom (en, es)
 └── snippets/                # Main snippets folder
     ├── java/
     │   ├── core/

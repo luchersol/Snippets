@@ -65,11 +65,8 @@ Por ejemplo, en un archivo Java, escribe `class` y presiona `Tab` para insertar 
 VSCodeHelpers/
 ├── add-snippets.py          # Script para instalación automática
 ├── LICENSE                  # Licencia del proyecto
-├── README.md                # Este archivo
-├── Test.java                # Archivo de prueba para Java
-├── Test.js                  # Archivo de prueba para JavaScript
-├── Test.md                  # Archivo de prueba para Markdown
-├── Test.py                  # Archivo de prueba para Python
+├── README.md                
+├── docs/                    # Carpeta de documentación por idiomas (en, es)
 └── snippets/                # Carpeta principal de snippets
     ├── java/
     │   ├── core/
