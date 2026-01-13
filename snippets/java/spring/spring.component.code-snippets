@@ -40,7 +40,7 @@
   },
   "Spring JPA Repository": {
     "scope": "java",
-    "prefix": "spring:repository",
+    "prefix": "spring:repo",
     "isFileTemplate": true,
     "description": "Create a JpaRepository interface for a JPA entity",
     "body": [

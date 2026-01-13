@@ -15,7 +15,7 @@ Una colección curada de snippets, plantillas y configuraciones para VS Code, di
   - Core (arrays, clases, colecciones, excepciones, I/O, switches)
   - JSP (bases, condicionales, CRUD, formularios, includes, enlaces, bucles, mensajes, tablas)
   - PicoCLI (básicos, opciones, prompts, subcomandos)
-  - Spring (componentes, configuración, excepciones, Thymeleaf)
+  - Spring (querys, componentes, configuración, excepciones, Thymeleaf)
 
 - **JavaScript**:
   - Core (arrays, básicos, clases, colecciones, comentarios, excepciones, I/O, switches)
