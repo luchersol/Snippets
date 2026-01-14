@@ -35,7 +35,9 @@ The folder `settings` contains different VS Code settings files, each designed f
 - **Python**:
   - Core (basics, classes, collections, comments, exceptions, functions, I/O, loops)
   - Click (basics, echo/colors, options, subcommands)
-  - Django (and more in development)
+  - Django
+  - Numpy
+  - Pandas
 
 - **Markdown**:
   - Formatting, headings, links and media, lists, tables and code

@@ -36,7 +36,9 @@ La carpeta `settings` contiene diferentes archivos de configuración de VS Code,
 - **Python**:
   - Core (básicos, clases, colecciones, comentarios, excepciones, funciones, I/O, bucles)
   - Click (básicos, echo/colors, opciones, subcomandos)
-  - Django (y más en desarrollo)
+  - Django
+  - Numpy
+  - Pandas
 
 - **Markdown**:
   - Formateo, encabezados, enlaces y medios, listas, tablas y código
