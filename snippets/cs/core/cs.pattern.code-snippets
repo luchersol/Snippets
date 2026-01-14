@@ -1,0 +1,66 @@
+{
+    "C# Singleton Class": {
+        "scope": "csharp",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Singleton class in C#",
+        "body": [
+            "public class ${1:Singleton} {",
+            "\tprivate static ${1:Singleton} _instance;",
+            "\tprivate static readonly object _lock = new object();",
+            "",
+            "\tprivate ${1:Singleton}() {",
+            "\t\t$0",
+            "\t}",
+            "",
+            "\tpublic static ${1:Singleton} Instance {",
+            "\t\tget {",
+            "\t\t\tlock(_lock) {",
+            "\t\t\t\tif (_instance == null) {",
+            "\t\t\t\t\t_instance = new ${1:Singleton}();",
+            "\t\t\t\t}",
+            "\t\t\t\treturn _instance;",
+            "\t\t\t}",
+            "\t\t}",
+            "\t}",
+            "}"
+        ]
+    },
+    "C# Abstract Product": {
+        "scope": "csharp",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product class",
+        "body": [
+            "public abstract class ${1:Product} {",
+            "\tpublic abstract void Use();",
+            "}"
+        ]
+    },
+    "C# Concrete Product": {
+        "scope": "csharp",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product class",
+        "body": [
+            "public class ${1:ConcreteProduct} : ${2:Product} {",
+            "\tpublic override void Use() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    },
+    "C# Factory Class": {
+        "scope": "csharp",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class",
+        "body": [
+            "public static class ${1:Factory} {",
+            "\tpublic static ${2:Product} Create${2:Product}() {",
+            "\t\treturn new ${3:ConcreteProduct}();",
+            "\t}",
+            "}"
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "C++ Singleton Class": {
+        "scope": "cpp",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Singleton class",
+        "body": [
+            "class ${1:Singleton} {",
+            "private:",
+            "\tstatic ${1:Singleton}* instance;",
+            "\t${1:Singleton}() {",
+            "\t\t$0",
+            "\t}",
+            "public:",
+            "\tstatic ${1:Singleton}* getInstance() {",
+            "\t\tif (!instance) {",
+            "\t\t\tinstance = new ${1:Singleton}();",
+            "\t\t}",
+            "\t\treturn instance;",
+            "\t}",
+            "};",
+            "",
+            "${1:Singleton}* ${1:Singleton}::instance = nullptr;"
+        ]
+    },
+    "C++ Abstract Product": {
+        "scope": "cpp",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product class",
+        "body": [
+            "class ${1:Product} {",
+            "public:",
+            "\tvirtual void use() = 0;",
+            "\tvirtual ~${1:Product}() = default;",
+            "};"
+        ]
+    },
+    "C++ Concrete Product": {
+        "scope": "cpp",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product class",
+        "body": [
+            "#include \"${2:Product}.h\"",
+            "class ${1:ConcreteProduct} : public ${2:Product} {",
+            "public:",
+            "\tvoid use() override {",
+            "\t\t$0",
+            "\t}",
+            "};"
+        ]
+    },
+    "C++ Factory Class": {
+        "scope": "cpp",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class",
+        "body": [
+            "#include \"${3:ConcreteProduct}.h\"",
+            "class ${1:Factory} {",
+            "public:",
+            "\tstatic ${2:Product}* create${2:Product}() {",
+            "\t\treturn new ${3:ConcreteProduct}();",
+            "\t}",
+            "};"
+        ]
+    }
+}

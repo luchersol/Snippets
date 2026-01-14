@@ -1,0 +1,131 @@
+{
+    // ------------------ Singleton ------------------
+    "Python Singleton Class": {
+        "scope": "python",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Generic singleton class using a class-level instance",
+        "body": [
+            "class ${1:Singleton}:",
+            "\t_instance = None",
+            "",
+            "\tdef __new__(cls, *args, **kwargs):",
+            "\t\tif cls._instance is None:",
+            "\t\t\tcls._instance = super(${1}, cls).__new__(cls)",
+            "\t\t\t# initialize your instance here",
+            "\t\t\t$0",
+            "\t\treturn cls._instance"
+        ]
+    },
+
+    // ------------------ Factory ------------------
+    "Python Abstract Product": {
+        "scope": "python",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product class for Factory pattern",
+        "body": [
+            "class ${1:Product}:",
+            "\tdef use(self):",
+            "\t\traise NotImplementedError()"
+        ]
+    },
+    "Python Concrete Product": {
+        "scope": "python",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product class for Factory pattern",
+        "body": [
+            "class ${1:ConcreteProduct}(${2:Product}):",
+            "\tdef use(self):",
+            "\t\t$0"
+        ]
+    },
+    "Python Factory Class": {
+        "scope": "python",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class to create products",
+        "body": [
+            "class ${1:Factory}:",
+            "\t@staticmethod",
+            "\tdef create_${2:product_name}():",
+            "\t\treturn ${3:ConcreteProduct}()"
+        ]
+    },
+
+    // ------------------ Observer ------------------
+    "Python Observer Interface": {
+        "scope": "python",
+        "prefix": "observer:interface",
+        "isFileTemplate": true,
+        "description": "Observer interface for Observer pattern",
+        "body": [
+            "class ${1:Observer}:",
+            "\tdef update(self, data):",
+            "\t\traise NotImplementedError()"
+        ]
+    },
+    "Python Subject Class": {
+        "scope": "python",
+        "prefix": "observer:subject",
+        "isFileTemplate": true,
+        "description": "Subject class for Observer pattern",
+        "body": [
+            "class ${1:Subject}:",
+            "\tdef __init__(self):",
+            "\t\tself._observers = []",
+            "",
+            "\tdef add_observer(self, observer):",
+            "\t\tself._observers.append(observer)",
+            "",
+            "\tdef remove_observer(self, observer):",
+            "\t\tself._observers.remove(observer)",
+            "",
+            "\tdef notify_observers(self, data):",
+            "\t\tfor obs in self._observers:",
+            "\t\t\tobs.update(data)"
+        ]
+    },
+
+    // ------------------ Strategy ------------------
+    "Python Strategy Interface": {
+        "scope": "python",
+        "prefix": "strategy:interface",
+        "isFileTemplate": true,
+        "description": "Strategy interface for Strategy pattern",
+        "body": [
+            "class ${1:Strategy}:",
+            "\tdef execute(self):",
+            "\t\traise NotImplementedError()"
+        ]
+    },
+    "Python Concrete Strategy Class": {
+        "scope": "python",
+        "prefix": "strategy:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete strategy implementation",
+        "body": [
+            "class ${1:ConcreteStrategy}(${2:Strategy}):",
+            "\tdef execute(self):",
+            "\t\t$0"
+        ]
+    },
+    "Python Strategy Context Class": {
+        "scope": "python",
+        "prefix": "strategy:context",
+        "isFileTemplate": true,
+        "description": "Context class that uses a strategy",
+        "body": [
+            "class ${1:Context}:",
+            "\tdef __init__(self, strategy):",
+            "\t\tself._strategy = strategy",
+            "",
+            "\tdef set_strategy(self, strategy):",
+            "\t\tself._strategy = strategy",
+            "",
+            "\tdef execute_strategy(self):",
+            "\t\tself._strategy.execute()"
+        ]
+    }
+}

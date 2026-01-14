@@ -1,0 +1,24 @@
+{
+    "C Singleton Struct": {
+        "scope": "c",
+        "prefix": "singleton:struct",
+        "isFileTemplate": true,
+        "description": "Singleton struct pattern",
+        "body": [
+            "typedef struct ${1:Singleton} {",
+            "\t// fields",
+            "} ${1:Singleton};",
+            "",
+            "static ${1:Singleton}* instance = NULL;",
+            "",
+            "${1:Singleton}* getInstance() {",
+            "\tif (instance == NULL) {",
+            "\t\tinstance = (${1:Singleton}*)malloc(sizeof(${1:Singleton}));",
+            "\t\t// initialize fields",
+            "\t\t$0",
+            "\t}",
+            "\treturn instance;",
+            "}"
+        ]
+    }
+}

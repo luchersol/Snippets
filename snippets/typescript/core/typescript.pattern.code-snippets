@@ -1,0 +1,65 @@
+{
+    "TypeScript Singleton Class": {
+        "scope": "typescript",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Singleton class in TypeScript",
+        "body": [
+            "export class ${1:Singleton} {",
+            "\tprivate static instance: ${1:Singleton};",
+            "",
+            "\tprivate constructor() {",
+            "\t\t$0",
+            "\t}",
+            "",
+            "\tpublic static getInstance(): ${1:Singleton} {",
+            "\t\tif (!${1:Singleton}.instance) {",
+            "\t\t\t${1:Singleton}.instance = new ${1:Singleton}();",
+            "\t\t}",
+            "\t\treturn ${1:Singleton}.instance;",
+            "\t}",
+            "}"
+        ]
+    },
+    "TypeScript Abstract Product": {
+        "scope": "typescript",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product class",
+        "body": [
+            "export abstract class ${1:Product} {",
+            "\tabstract use(): void;",
+            "}"
+        ]
+    },
+    "TypeScript Concrete Product": {
+        "scope": "typescript",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product class",
+        "body": [
+            "import { ${2:Product} } from './${2:Product}';",
+            "",
+            "export class ${1:ConcreteProduct} extends ${2:Product} {",
+            "\tuse(): void {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    },
+    "TypeScript Factory Class": {
+        "scope": "typescript",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class",
+        "body": [
+            "import { ${3:ConcreteProduct} } from './${3:ConcreteProduct}';",
+            "",
+            "export class ${1:Factory} {",
+            "\tstatic create${2:Product}(): ${2:Product} {",
+            "\t\treturn new ${3:ConcreteProduct}();",
+            "\t}",
+            "}"
+        ]
+    }
+}

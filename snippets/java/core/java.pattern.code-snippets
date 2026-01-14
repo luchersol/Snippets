@@ -1,0 +1,149 @@
+{
+    "Java Singleton Class": {
+        "scope": "java",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Generic singleton class",
+        "body": [
+            "public class ${1:ClassName} {",
+            "\tprivate static ${1} instance;",
+            "",
+            "\tprivate ${1}() {",
+            "\t\t$0",
+            "\t}",
+            "",
+            "\tpublic static ${1} getInstance() {",
+            "\t\tif (instance == null) {",
+            "\t\t\tinstance = new ${1}();",
+            "\t\t}",
+            "\t\treturn instance;",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Abstract Product": {
+        "scope": "java",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product for Factory pattern",
+        "body": [
+            "public abstract class ${1:Product} {",
+            "\tpublic abstract void ${2:use}();",
+            "}"
+        ]
+    },
+    "Java Concrete Product": {
+        "scope": "java",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product for Factory pattern",
+        "body": [
+            "public class ${1:ConcreteProduct} extends ${2:Product} {",
+            "\t@Override",
+            "\tpublic void ${3:use}() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Factory Class": {
+        "scope": "java",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class to create products",
+        "body": [
+            "public class ${1:Factory} {",
+            "\tpublic static ${2:Product} create${2:Product}() {",
+            "\t\treturn new ${3:ConcreteProduct}();",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Observer Interface": {
+        "scope": "java",
+        "prefix": "observer:interface",
+        "isFileTemplate": true,
+        "description": "Observer interface for Observer pattern",
+        "body": [
+            "public interface ${1:Observer} {",
+            "\tvoid update(${2:Object} data);",
+            "}"
+        ]
+    },
+    "Java Subject Class": {
+        "scope": "java",
+        "prefix": "observer:subject",
+        "isFileTemplate": true,
+        "description": "Subject class for Observer pattern",
+        "body": [
+            "import java.util.List;",
+            "import java.util.ArrayList;",
+            "",
+            "public class ${1:Subject} {",
+            "\tprivate List<${2:Observer}> observers = new ArrayList<>();",
+            "",
+            "\tpublic void addObserver(${2:Observer} observer) {",
+            "\t\tobservers.add(observer);",
+            "\t}",
+            "",
+            "\tpublic void removeObserver(${2:Observer} observer) {",
+            "\t\tobservers.remove(observer);",
+            "\t}",
+            "",
+            "\tpublic void notifyObservers(${3:Object} data) {",
+            "\t\tfor (${2:Observer} obs : observers) {",
+            "\t\t\tobs.update(data);",
+            "\t\t}",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Strategy Interface": {
+        "scope": "java",
+        "prefix": "strategy:interface",
+        "isFileTemplate": true,
+        "description": "Strategy interface for Strategy pattern",
+        "body": [
+            "public interface ${1:Strategy} {",
+            "\tvoid execute();",
+            "}"
+        ]
+    },
+    "Java Concrete Strategy Class": {
+        "scope": "java",
+        "prefix": "strategy:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete strategy implementation",
+        "body": [
+            "public class ${1:ConcreteStrategy} implements ${2:Strategy} {",
+            "\t@Override",
+            "\tpublic void execute() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    },
+    "Java Strategy Context Class": {
+        "scope": "java",
+        "prefix": "strategy:context",
+        "isFileTemplate": true,
+        "description": "Context class that uses a strategy",
+        "body": [
+            "public class ${1:Context} {",
+            "\tprivate ${2:Strategy} strategy;",
+            "",
+            "\tpublic ${1:Context}(${2:Strategy} strategy) {",
+            "\t\tthis.strategy = strategy;",
+            "\t}",
+            "",
+            "\tpublic void setStrategy(${2:Strategy} strategy) {",
+            "\t\tthis.strategy = strategy;",
+            "\t}",
+            "",
+            "\tpublic void executeStrategy() {",
+            "\t\tstrategy.execute();",
+            "\t}",
+            "}"
+        ]
+    }
+}

@@ -1,0 +1,175 @@
+{
+    // ------------------ Singleton ------------------
+    "JavaScript Singleton Class": {
+        "scope": "javascript",
+        "prefix": "singleton:class",
+        "isFileTemplate": true,
+        "description": "Generic singleton class",
+        "body": [
+            "class ${1:Singleton} {",
+            "\tconstructor() {",
+            "\t\tif (${1:Singleton}.instance) {",
+            "\t\t\treturn ${1:Singleton}.instance;",
+            "\t\t}",
+            "\t\t${1:Singleton}.instance = this;",
+            "\t\t// initialize your instance here",
+            "\t\t$0",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Singleton};"
+        ]
+    },
+
+    // ------------------ Factory ------------------
+    "JavaScript Abstract Product": {
+        "scope": "javascript",
+        "prefix": "factory:abstract",
+        "isFileTemplate": true,
+        "description": "Abstract product class for Factory pattern",
+        "body": [
+            "class ${1:Product} {",
+            "\tuse() {",
+            "\t\tthrow new Error('Method not implemented');",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Product};"
+        ]
+    },
+    "JavaScript Concrete Product": {
+        "scope": "javascript",
+        "prefix": "factory:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete product class for Factory pattern",
+        "body": [
+            "import ${2:Product} from './${2:Product}';",
+            "",
+            "class ${1:ConcreteProduct} extends ${2:Product} {",
+            "\tuse() {",
+            "\t\t$0",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:ConcreteProduct};"
+        ]
+    },
+    "JavaScript Factory Class": {
+        "scope": "javascript",
+        "prefix": "factory:class",
+        "isFileTemplate": true,
+        "description": "Factory class to create products",
+        "body": [
+            "import ${3:ConcreteProduct} from './${3:ConcreteProduct}';",
+            "",
+            "class ${1:Factory} {",
+            "\tstatic create${2:Product}() {",
+            "\t\treturn new ${3:ConcreteProduct}();",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Factory};"
+        ]
+    },
+
+    // ------------------ Observer ------------------
+    "JavaScript Observer Interface": {
+        "scope": "javascript",
+        "prefix": "observer:interface",
+        "isFileTemplate": true,
+        "description": "Observer interface for Observer pattern",
+        "body": [
+            "class ${1:Observer} {",
+            "\tupdate(data) {",
+            "\t\tthrow new Error('Method not implemented');",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Observer};"
+        ]
+    },
+    "JavaScript Subject Class": {
+        "scope": "javascript",
+        "prefix": "observer:subject",
+        "isFileTemplate": true,
+        "description": "Subject class for Observer pattern",
+        "body": [
+            "class ${1:Subject} {",
+            "\tconstructor() {",
+            "\t\tthis._observers = [];",
+            "\t}",
+            "",
+            "\taddObserver(observer) {",
+            "\t\tthis._observers.push(observer);",
+            "\t}",
+            "",
+            "\tremoveObserver(observer) {",
+            "\t\tthis._observers = this._observers.filter(o => o !== observer);",
+            "\t}",
+            "",
+            "\tnotifyObservers(data) {",
+            "\t\tthis._observers.forEach(obs => obs.update(data));",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Subject};"
+        ]
+    },
+
+    // ------------------ Strategy ------------------
+    "JavaScript Strategy Interface": {
+        "scope": "javascript",
+        "prefix": "strategy:interface",
+        "isFileTemplate": true,
+        "description": "Strategy interface for Strategy pattern",
+        "body": [
+            "class ${1:Strategy} {",
+            "\texecute() {",
+            "\t\tthrow new Error('Method not implemented');",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Strategy};"
+        ]
+    },
+    "JavaScript Concrete Strategy Class": {
+        "scope": "javascript",
+        "prefix": "strategy:concrete",
+        "isFileTemplate": true,
+        "description": "Concrete strategy implementation",
+        "body": [
+            "import ${2:Strategy} from './${2:Strategy}';",
+            "",
+            "class ${1:ConcreteStrategy} extends ${2:Strategy} {",
+            "\texecute() {",
+            "\t\t$0",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:ConcreteStrategy};"
+        ]
+    },
+    "JavaScript Strategy Context Class": {
+        "scope": "javascript",
+        "prefix": "strategy:context",
+        "isFileTemplate": true,
+        "description": "Context class that uses a strategy",
+        "body": [
+            "class ${1:Context} {",
+            "\tconstructor(strategy) {",
+            "\t\tthis._strategy = strategy;",
+            "\t}",
+            "",
+            "\tsetStrategy(strategy) {",
+            "\t\tthis._strategy = strategy;",
+            "\t}",
+            "",
+            "\texecuteStrategy() {",
+            "\t\tthis._strategy.execute();",
+            "\t}",
+            "}",
+            "",
+            "export default ${1:Context};"
+        ]
+    }
+}
