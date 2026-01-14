@@ -1,0 +1,19 @@
+{
+    "Angular Directive Basic": {
+        "scope": "typescript",
+        "prefix": "ng:directive",
+        "description": "Create a basic Angular directive",
+        "body": [
+            "import { Directive, ElementRef, Renderer2 } from '@angular/core';",
+            "",
+            "@Directive({",
+            "\tselector: '[${1:directiveName}]'",
+            "})",
+            "export class ${2:${1/^./${1:/upcase}/}}Directive {",
+            "\tconstructor(private el: ElementRef, private renderer: Renderer2) {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ]
+    }
+}

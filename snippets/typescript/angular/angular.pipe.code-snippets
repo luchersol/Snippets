@@ -1,0 +1,20 @@
+{
+    "Angular Pipe Basic": {
+        "scope": "typescript",
+        "prefix": "ng:pipe",
+        "description": "Create a basic Angular pipe",
+        "body": [
+            "import { Pipe, PipeTransform } from '@angular/core';",
+            "",
+            "@Pipe({",
+            "\tname: '${1:pipeName}'",
+            "})",
+            "export class ${2:${1/^./${1:/upcase}/}}Pipe implements PipeTransform {",
+            "\ttransform(value: any, ...args: any[]): any {",
+            "\t\t$0",
+            "\t\treturn value;",
+            "\t}",
+            "}"
+        ]
+    }
+}

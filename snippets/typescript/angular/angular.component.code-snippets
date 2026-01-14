@@ -1,0 +1,52 @@
+{
+    "Angular Component Basic": {
+        "scope": "typescript",
+        "prefix": "ng:component",
+        "description": "Create a basic Angular component",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: 'app-${1:componentName}',",
+            "\ttemplateUrl: './${1}.component.html',",
+            "\tstyleUrls: ['./${1}.component.css']",
+            "})",
+            "export class ${2:${1/^./${1:/upcase}/}}Component {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Angular Component Inline Template": {
+        "scope": "typescript",
+        "prefix": "ng:component:inline",
+        "description": "Create an Angular component with inline template",
+        "body": [
+            "import { Component } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: 'app-${1:componentName}',",
+            "\ttemplate: `<div>$0</div>`,",
+            "\tstyles: ['']",
+            "})",
+            "export class ${2:${1/^./${1:/upcase}/}}Component {}"
+        ]
+    },
+    "Angular Component With Input": {
+        "scope": "typescript",
+        "prefix": "ng:component:input",
+        "description": "Create an Angular component with @Input property",
+        "body": [
+            "import { Component, Input } from '@angular/core';",
+            "",
+            "@Component({",
+            "\tselector: 'app-${1:componentName}',",
+            "\ttemplateUrl: './${1}.component.html',",
+            "\tstyleUrls: ['./${1}.component.css']",
+            "})",
+            "export class ${2:${1/^./${1:/upcase}/}}Component {",
+            "\t@Input() ${3:inputProp}: ${4:string};",
+            "\t$0",
+            "}"
+        ]
+    }
+}

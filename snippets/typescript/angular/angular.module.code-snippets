@@ -1,0 +1,19 @@
+{
+    "Angular Module Basic": {
+        "scope": "typescript",
+        "prefix": "ng:module",
+        "description": "Create a basic Angular module",
+        "body": [
+            "import { NgModule } from '@angular/core';",
+            "import { CommonModule } from '@angular/common';",
+            "import { ${1:ComponentName} } from './${2:component-name}.component';",
+            "",
+            "@NgModule({",
+            "\tdeclarations: [${1:ComponentName}],",
+            "\timports: [CommonModule],",
+            "\texports: [${1:ComponentName}]",
+            "})",
+            "export class ${3:${1}Module} {}"
+        ]
+    }
+}

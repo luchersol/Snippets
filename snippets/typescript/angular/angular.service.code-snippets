@@ -1,0 +1,18 @@
+{
+    "Angular Service Basic": {
+        "scope": "typescript",
+        "prefix": "ng:service",
+        "description": "Create a basic Angular service",
+        "body": [
+            "import { Injectable } from '@angular/core';",
+            "",
+            "@Injectable({",
+            "\tprovidedIn: 'root'",
+            "})",
+            "export class ${1:ServiceName} {",
+            "\tconstructor() { }",
+            "\t$0",
+            "}"
+        ]
+    }
+}
