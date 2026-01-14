@@ -1,0 +1,62 @@
+{
+    "Array shape": {
+        "scope": "python",
+        "prefix": "np:shape",
+        "description": "Get array shape",
+        "body": "arr.shape$0"
+    },
+    "Reshape array": {
+        "scope": "python",
+        "prefix": "np:reshape",
+        "description": "Reshape an array",
+        "body": "arr = arr.reshape(${1:rows}, ${2:cols})$0"
+    },
+    "Flatten array": {
+        "scope": "python",
+        "prefix": "np:flatten",
+        "description": "Flatten array to 1D",
+        "body": "arr.flatten()$0"
+    },
+    "Transpose": {
+        "scope": "python",
+        "prefix": "np:transpose",
+        "description": "Transpose array",
+        "body": "arr.T$0"
+    },
+    "Sum": {
+        "scope": "python",
+        "prefix": "np:sum",
+        "description": "Sum elements",
+        "body": "np.sum(arr, axis=${1:None})$0"
+    },
+    "Mean": {
+        "scope": "python",
+        "prefix": "np:mean",
+        "description": "Mean of elements",
+        "body": "np.mean(arr, axis=${1:None})$0"
+    },
+    "Standard deviation": {
+        "scope": "python",
+        "prefix": "np:std",
+        "description": "Standard deviation",
+        "body": "np.std(arr, axis=${1:None})$0"
+    },
+    "Variance": {
+        "scope": "python",
+        "prefix": "np:var",
+        "description": "Variance of elements",
+        "body": "np.var(arr, axis=${1:None})$0"
+    },
+    "Min and max": {
+        "scope": "python",
+        "prefix": "np:minmax",
+        "description": "Minimum and maximum",
+        "body": "np.min(arr), np.max(arr)$0"
+    },
+    "Percentile": {
+        "scope": "python",
+        "prefix": "np:percentile",
+        "description": "Percentile of array",
+        "body": "np.percentile(arr, ${1:50})$0"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "Select column": {
+        "scope": "python",
+        "prefix": "df:select:col",
+        "description": "Select a single column",
+        "body": "df['${1:column_name}']$0"
+    },
+    "Select multiple columns": {
+        "scope": "python",
+        "prefix": "df:select:cols",
+        "description": "Select multiple columns",
+        "body": "df[[${1:'col1','col2'}]]$0"
+    },
+    "Filter rows": {
+        "scope": "python",
+        "prefix": "df:filter",
+        "description": "Filter rows by condition",
+        "body": "df_filtered = df[df['${1:column}'] ${2:operator} ${3:value}]$0"
+    },
+    "Select rows by index": {
+        "scope": "python",
+        "prefix": "df:iloc",
+        "description": "Select rows by index using iloc",
+        "body": "df.iloc[${1:start}:${2:end}, ${3:columns}]$0"
+    },
+    "Select rows by label": {
+        "scope": "python",
+        "prefix": "df:loc",
+        "description": "Select rows by label using loc",
+        "body": "df.loc[${1:row_label}, ${2:columns}]$0"
+    },
+    "Conditional selection": {
+        "scope": "python",
+        "prefix": "df:select:cond",
+        "description": "Select rows with multiple conditions",
+        "body": "df_filtered = df[(${1:condition1}) & (${2:condition2})]$0"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "Concatenate arrays": {
+        "scope": "python",
+        "prefix": "np:concat",
+        "description": "Concatenate arrays along an axis",
+        "body": "np.concatenate([${1:arr1}, ${2:arr2}], axis=${3:0})$0"
+    },
+    "Stack arrays vertically": {
+        "scope": "python",
+        "prefix": "np:vstack",
+        "description": "Stack arrays vertically",
+        "body": "np.vstack([${1:arr1}, ${2:arr2}])$0"
+    },
+    "Stack arrays horizontally": {
+        "scope": "python",
+        "prefix": "np:hstack",
+        "description": "Stack arrays horizontally",
+        "body": "np.hstack([${1:arr1}, ${2:arr2}])$0"
+    },
+    "Split array": {
+        "scope": "python",
+        "prefix": "np:split",
+        "description": "Split array into multiple sub-arrays",
+        "body": "np.split(${1:arr}, ${2:indices_or_sections}, axis=${3:0})$0"
+    },
+    "Tile array": {
+        "scope": "python",
+        "prefix": "np:tile",
+        "description": "Tile an array",
+        "body": "np.tile(${1:arr}, ${2:(2,2)})$0"
+    }
+}

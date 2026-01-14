@@ -1,0 +1,32 @@
+{
+    "Plot column": {
+        "scope": "python",
+        "prefix": "df:plot:col",
+        "description": "Plot a column using pandas",
+        "body": "df['${1:column}'].plot(${2:kind='line'})$0"
+    },
+    "Plot histogram": {
+        "scope": "python",
+        "prefix": "df:plot:hist",
+        "description": "Plot histogram of a column",
+        "body": "df['${1:column}'].hist(bins=${2:10})$0"
+    },
+    "Plot scatter": {
+        "scope": "python",
+        "prefix": "df:plot:scatter",
+        "description": "Plot scatter between two columns",
+        "body": "df.plot.scatter(x='${1:x_col}', y='${2:y_col}')$0"
+    },
+    "Plot box": {
+        "scope": "python",
+        "prefix": "df:plot:box",
+        "description": "Plot boxplot for column(s)",
+        "body": "df.boxplot(column=['${1:col1}','${2:col2}'])$0"
+    },
+    "Plot multiple columns": {
+        "scope": "python",
+        "prefix": "df:plot:multi",
+        "description": "Plot multiple columns",
+        "body": "df[['${1:col1}','${2:col2}']].plot()$0"
+    }
+}

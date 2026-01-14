@@ -1,0 +1,20 @@
+{
+    "Index element": {
+        "scope": "python",
+        "prefix": "np:index",
+        "description": "Access element",
+        "body": "arr[${1:0}]$0"
+    },
+    "Slice array": {
+        "scope": "python",
+        "prefix": "np:slice",
+        "description": "Slice array",
+        "body": "arr[${1:start}:${2:end}]$0"
+    },
+    "Boolean indexing": {
+        "scope": "python",
+        "prefix": "np:bool:index",
+        "description": "Select elements by condition",
+        "body": "arr[arr ${1:> ${2:value}}]$0"
+    }
+}

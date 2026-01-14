@@ -1,0 +1,38 @@
+{
+    "Dot product": {
+        "scope": "python",
+        "prefix": "np:dot",
+        "description": "Dot product of arrays",
+        "body": "np.dot(${1:arr1}, ${2:arr2})$0"
+    },
+    "Matrix multiply": {
+        "scope": "python",
+        "prefix": "np:matmul",
+        "description": "Matrix multiplication",
+        "body": "${1:arr1} @ ${2:arr2}$0"
+    },
+    "Element-wise multiply": {
+        "scope": "python",
+        "prefix": "np:mul",
+        "description": "Element-wise multiplication",
+        "body": "${1:arr1} * ${2:arr2}$0"
+    },
+    "Matrix inverse": {
+        "scope": "python",
+        "prefix": "np:inv",
+        "description": "Inverse of a matrix",
+        "body": "np.linalg.inv(${1:matrix})$0"
+    },
+    "Matrix determinant": {
+        "scope": "python",
+        "prefix": "np:det",
+        "description": "Determinant of a matrix",
+        "body": "np.linalg.det(${1:matrix})$0"
+    },
+    "Eigenvalues and eigenvectors": {
+        "scope": "python",
+        "prefix": "np:eig",
+        "description": "Eigenvalues and eigenvectors",
+        "body": "np.linalg.eig(${1:matrix})$0"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "Group by column": {
+        "scope": "python",
+        "prefix": "df:groupby",
+        "description": "Group DataFrame by column",
+        "body": "df_grouped = df.groupby('${1:column}')$0"
+    },
+    "Group by and aggregate": {
+        "scope": "python",
+        "prefix": "df:groupby:agg",
+        "description": "Group by column and aggregate",
+        "body": "df_grouped = df.groupby('${1:column}').agg({'${2:col}':'${3:mean}'})$0"
+    },
+    "Pivot table": {
+        "scope": "python",
+        "prefix": "df:pivot",
+        "description": "Create a pivot table",
+        "body": "pivot = pd.pivot_table(df, values='${1:values}', index='${2:index}', columns='${3:columns}', aggfunc='${4:mean}')$0"
+    },
+    "Merge DataFrames": {
+        "scope": "python",
+        "prefix": "df:merge",
+        "description": "Merge two DataFrames",
+        "body": "df_merged = pd.merge(df1, df2, on='${1:key}', how='${2:inner}')$0"
+    },
+    "Concat DataFrames": {
+        "scope": "python",
+        "prefix": "df:concat",
+        "description": "Concatenate DataFrames",
+        "body": "df_concat = pd.concat([df1, df2], axis=${1:0})$0"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "Import NumPy": {
+        "scope": "python",
+        "prefix": "np:import",
+        "description": "Import NumPy library",
+        "body": "import numpy as np"
+    }
+}

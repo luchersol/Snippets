@@ -1,0 +1,32 @@
+{
+    "Sine": {
+        "scope": "python",
+        "prefix": "np:sin",
+        "description": "Sine of elements",
+        "body": "np.sin(${1:arr})$0"
+    },
+    "Cosine": {
+        "scope": "python",
+        "prefix": "np:cos",
+        "description": "Cosine of elements",
+        "body": "np.cos(${1:arr})$0"
+    },
+    "Exponential": {
+        "scope": "python",
+        "prefix": "np:exp",
+        "description": "Exponential of elements",
+        "body": "np.exp(${1:arr})$0"
+    },
+    "Logarithm": {
+        "scope": "python",
+        "prefix": "np:log",
+        "description": "Natural logarithm",
+        "body": "np.log(${1:arr})$0"
+    },
+    "Square root": {
+        "scope": "python",
+        "prefix": "np:sqrt",
+        "description": "Square root of elements",
+        "body": "np.sqrt(${1:arr})$0"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "Array from list": {
+        "scope": "python",
+        "prefix": "np:create:list",
+        "description": "Create a NumPy array from a list",
+        "body": "arr = np.array([${1:1,2,3}])$0"
+    },
+    "Zeros array": {
+        "scope": "python",
+        "prefix": "np:create:zeros",
+        "description": "Array of zeros",
+        "body": "arr = np.zeros(${1:(3,)})$0"
+    },
+    "Ones array": {
+        "scope": "python",
+        "prefix": "np:create:ones",
+        "description": "Array of ones",
+        "body": "arr = np.ones(${1:(3,)})$0"
+    },
+    "Identity matrix": {
+        "scope": "python",
+        "prefix": "np:create:eye",
+        "description": "Create identity matrix",
+        "body": "arr = np.eye(${1:3})$0"
+    },
+    "Diagonal matrix": {
+        "scope": "python",
+        "prefix": "np:create:diag",
+        "description": "Create a diagonal matrix",
+        "body": "arr = np.diag([${1:1,2,3}])$0"
+    },
+    "Random array": {
+        "scope": "python",
+        "prefix": "np:create:rand",
+        "description": "Random numbers in [0,1)",
+        "body": "arr = np.random.rand(${1:3}, ${2:3})$0"
+    },
+    "Random integers": {
+        "scope": "python",
+        "prefix": "np:create:randint",
+        "description": "Random integers",
+        "body": "arr = np.random.randint(${1:0}, ${2:10}, size=(${3:3}, ${4:3}))$0"
+    },
+    "Range array": {
+        "scope": "python",
+        "prefix": "np:create:range",
+        "description": "Array with range",
+        "body": "arr = np.arange(${1:0}, ${2:10}, ${3:1})$0"
+    },
+    "Linspace array": {
+        "scope": "python",
+        "prefix": "np:create:linspace",
+        "description": "Evenly spaced numbers",
+        "body": "arr = np.linspace(${1:0}, ${2:1}, ${3:5})$0"
+    }
+}

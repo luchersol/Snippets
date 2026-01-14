@@ -1,0 +1,20 @@
+{
+    "Check missing": {
+        "scope": "python",
+        "prefix": "df:missing:check",
+        "description": "Check for missing values",
+        "body": "df.isnull().sum()$0"
+    },
+    "Drop missing": {
+        "scope": "python",
+        "prefix": "df:missing:drop",
+        "description": "Drop rows with missing values",
+        "body": "df = df.dropna()$0"
+    },
+    "Fill missing": {
+        "scope": "python",
+        "prefix": "df:missing:fill",
+        "description": "Fill missing values",
+        "body": "df['${1:col}'] = df['${1:col}'].fillna(${2:0})$0"
+    }
+}

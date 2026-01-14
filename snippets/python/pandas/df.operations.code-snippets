@@ -1,0 +1,44 @@
+{
+    "Add column": {
+        "scope": "python",
+        "prefix": "df:add:col",
+        "description": "Add a new column",
+        "body": "df['${1:new_col}'] = ${2:expression}$0"
+    },
+    "Drop column": {
+        "scope": "python",
+        "prefix": "df:drop:col",
+        "description": "Drop a column",
+        "body": "df = df.drop(columns=['${1:column}'])$0"
+    },
+    "Sort DataFrame": {
+        "scope": "python",
+        "prefix": "df:sort",
+        "description": "Sort DataFrame by column",
+        "body": "df = df.sort_values(by='${1:column}', ascending=${2:True})$0"
+    },
+    "Rename columns": {
+        "scope": "python",
+        "prefix": "df:rename:cols",
+        "description": "Rename columns",
+        "body": "df = df.rename(columns={${1:'old_name':'new_name'}})$0"
+    },
+    "Apply function": {
+        "scope": "python",
+        "prefix": "df:apply",
+        "description": "Apply a function to a column",
+        "body": "df['${1:col}'] = df['${1:col}'].apply(${2:lambda x: x})$0"
+    },
+    "Map values": {
+        "scope": "python",
+        "prefix": "df:map",
+        "description": "Map values of a column",
+        "body": "df['${1:col}'] = df['${1:col}'].map(${2:{'a':'A','b':'B'}})$0"
+    },
+    "Replace values": {
+        "scope": "python",
+        "prefix": "df:replace",
+        "description": "Replace values in DataFrame",
+        "body": "df = df.replace({${1:'old':'new'}})$0"
+    }
+}

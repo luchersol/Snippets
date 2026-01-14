@@ -1,0 +1,35 @@
+{
+    "Import pandas": {
+        "scope": "python",
+        "prefix": "df:import",
+        "description": "Import pandas library",
+        "body": "import pandas as pd"
+    },
+    "Create DataFrame from dict": {
+        "scope": "python",
+        "prefix": "df:create:dict",
+        "description": "Create a DataFrame from a dictionary",
+        "body": [
+            "data = {${1:'column1'}: [${2:1,2,3}], ${3:'column2'}: [${4:'a','b','c'}]}",
+            "df = pd.DataFrame(data)$0"
+        ]
+    },
+    "Read CSV": {
+        "scope": "python",
+        "prefix": "df:read:csv",
+        "description": "Read a CSV file into a DataFrame",
+        "body": "df = pd.read_csv('${1:path/to/file.csv}')$0"
+    },
+    "Read Excel": {
+        "scope": "python",
+        "prefix": "df:read:excel",
+        "description": "Read an Excel file into a DataFrame",
+        "body": "df = pd.read_excel('${1:path/to/file.xlsx}')$0"
+    },
+    "Create empty DataFrame": {
+        "scope": "python",
+        "prefix": "df:create:empty",
+        "description": "Create an empty DataFrame with columns",
+        "body": "df = pd.DataFrame(columns=[${1:'col1','col2'}])$0"
+    }
+}
