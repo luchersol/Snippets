@@ -1,0 +1,41 @@
+{
+    "Java Anonymous Class - Runnable": {
+        "scope": "java",
+        "prefix": "anon:runnable",
+        "description": "Anonymous class implementing Runnable",
+        "body": [
+            "Runnable ${1:task} = new Runnable() {",
+            "\t@Override",
+            "\tpublic void run() {",
+            "\t\t${2:// code here}",
+            "\t}",
+            "};"
+        ]
+    },
+    "Java Anonymous Class - Thread": {
+        "scope": "java",
+        "prefix": "anon:thread",
+        "description": "Anonymous class implementing Runnable",
+        "body": [
+            "Thread ${1:task} = new Thread() {",
+            "\t@Override",
+            "\tpublic void run() {",
+            "\t\t${2:// code here}",
+            "\t}",
+            "};"
+        ]
+    },
+    "Java Anonymous Class - Generic": {
+        "scope": "java",
+        "prefix": "anon:generic",
+        "description": "Anonymous class for extending a class or implementing an interface",
+        "body": [
+            "${1:Type} ${2:instance} = new ${1:Type}() {",
+            "\t@Override",
+            "\tpublic ${3:void} ${4:methodName}(${5:params}) {",
+            "\t\t${6:// implementation here}",
+            "\t}",
+            "};"
+        ]
+    }
+}

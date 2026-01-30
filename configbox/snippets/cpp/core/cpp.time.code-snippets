@@ -38,16 +38,13 @@
     },
 
     "C++ Parse String to tm": {
-        "scope": "cpp",
         "prefix": "date:parse",
         "description": "Parse date string to std::tm",
         "body": [
-            "#include <iomanip>",
-            "#include <sstream>",
-            "",
-            "std::tm ${1:tm_date} = {};",
-            "std::istringstream ${2:ss}(${3:date_string});",
-            "${2} >> std::get_time(&${1}, \"${4|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\");"
+            "${1:#include <iomanip>\n#include <sstream>\n}",
+            "std::tm ${2:tm_date} = {};",
+            "std::istringstream ${3:ss}(${4:date_string});",
+            "${3} >> std::get_time(&${2}, \"${5|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\");"
         ]
     },
 
@@ -56,11 +53,9 @@
         "prefix": "time:from:tm",
         "description": "Convert tm to time_point",
         "body": [
-            "#include <chrono>",
-            "#include <ctime>",
-            "",
-            "std::time_t ${1:t} = std::mktime(&${2:tm_date});",
-            "auto ${3:tp} = std::chrono::system_clock::from_time_t(${1});"
+            "${1:#include <chrono>\n#include <ctime>\n}",
+            "std::time_t ${2:t} = std::mktime(&${3:tm_date});",
+            "auto ${4:tp} = std::chrono::system_clock::from_time_t(${2});"
         ]
     },
 

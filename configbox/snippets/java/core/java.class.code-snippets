@@ -5,7 +5,7 @@
         "description": "Base class and derived class showing inheritance and override",
         "body": [
             "public class ${2:MyClass} extends ${1:MyExtendClass} {",
-            "",
+            "$0",
             "}"
         ]
     },

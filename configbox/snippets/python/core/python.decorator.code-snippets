@@ -1,0 +1,84 @@
+{
+    "Python Basic Decorator": {
+        "scope": "python",
+        "prefix": "dec:basic",
+        "description": "Basic function decorator structure",
+        "body": [
+            "def ${1:decorator_name}(func):",
+            "\tdef wrapper(*args, **kwargs):",
+            "\t\t${2:# lógica antes}",
+            "\t\tresult = func(*args, **kwargs)",
+            "\t\t${3:# lógica después}",
+            "\t\treturn result",
+            "\treturn wrapper"
+        ]
+    },
+    "Python Decorator Usage": {
+        "scope": "python",
+        "prefix": "dec:use",
+        "description": "Apply decorator to a function",
+        "body": [
+            "@${1:decorator_name}",
+            "def ${2:function_name}(${3:args}):",
+            "\t$0"
+        ]
+    },
+    "Python Decorator with Arguments": {
+        "scope": "python",
+        "prefix": "dec:args",
+        "description": "Decorator that receives arguments",
+        "body": [
+            "def ${1:decorator_name}(${2:params}):",
+            "\tdef actual_decorator(func):",
+            "\t\tdef wrapper(*args, **kwargs):",
+            "\t\t\t${3:# lógica usando params}",
+            "\t\t\treturn func(*args, **kwargs)",
+            "\t\treturn wrapper",
+            "\treturn actual_decorator"
+        ]
+    },
+    "Python Timing Decorator": {
+        "scope": "python",
+        "prefix": "dec:time",
+        "description": "Measure execution time of a function",
+        "body": [
+            "${1|import time\n, |}",
+            "def ${2:timer}(func):",
+            "\tdef wrapper(*args, **kwargs):",
+            "\t\tstart = time.time()",
+            "\t\tresult = func(*args, **kwargs)",
+            "\t\tend = time.time()",
+            "\t\tprint(f\"{func.__name__} took {end - start:.4f}s\")",
+            "\t\treturn result",
+            "\treturn wrapper"
+        ]
+    },
+    "Python Debug Decorator": {
+        "scope": "python",
+        "prefix": "dec:debug",
+        "description": "Decorator to log function calls",
+        "body": [
+            "def ${1:debug}(func):",
+            "\tdef wrapper(*args, **kwargs):",
+            "\t\tprint(f\"Calling {func.__name__} with {args=} {kwargs=}\")",
+            "\t\tresult = func(*args, **kwargs)",
+            "\t\tprint(f\"{func.__name__} returned {result=}\")",
+            "\t\treturn result",
+            "\treturn wrapper"
+        ]
+    },
+    "Python Preserve Metadata (functools.wraps)": {
+        "scope": "python",
+        "prefix": "dec:wraps",
+        "description": "Decorator template preserving metadata",
+        "body": [
+            "${1|from functools import wraps\n, |}",
+            "def ${2:decorator_name}(func):",
+            "\t@wraps(func)",
+            "\tdef wrapper(*args, **kwargs):",
+            "\t\t$0",
+            "\t\treturn func(*args, **kwargs)",
+            "\treturn wrapper"
+        ]
+    }
+}

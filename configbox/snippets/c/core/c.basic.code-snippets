@@ -61,7 +61,7 @@
         "description": "Basic while loop",
         "body": [
             "while (${1:condition}) {",
-            "\t$2",
+            "\t$0",
             "}"
         ]
     },

@@ -22,7 +22,7 @@
         "body": [
             "public async Task<${1:void}> ${2:MethodName}Async() {",
             "\tawait ${3:Task.Delay(1000)};",
-            "\t$4",
+            "\t$0",
             "}"
         ]
     },

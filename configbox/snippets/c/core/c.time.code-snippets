@@ -4,8 +4,7 @@
         "prefix": "time:now",
         "description": "Get current time (time_t)",
         "body": [
-            "#include <time.h>",
-            "",
+            "${1:#include <time.h>\n}",
             "time_t now = time(NULL);"
         ]
     },
@@ -15,8 +14,7 @@
         "prefix": "time:local",
         "description": "Get local time as struct tm",
         "body": [
-            "#include <time.h>",
-            "",
+            "${1:#include <time.h>\n}",
             "time_t now = time(NULL);",
             "struct tm *local = localtime(&now);"
         ]
@@ -27,10 +25,9 @@
         "prefix": "date:format",
         "description": "Format date using strftime",
         "body": [
-            "#include <time.h>",
-            "",
-            "char ${1:buffer}[${2:64}];",
-            "strftime(${1}, sizeof(${1}), \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%H:%M:%S,%Y-%m-%d %H:%M:%S|}\", ${4:local});"
+            "${1:#include <time.h>\n}",
+            "char ${2:buffer}[${3:64}];",
+            "strftime(${2}, sizeof(${2}), \"${4|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%H:%M:%S,%Y-%m-%d %H:%M:%S|}\", ${5:local});"
         ]
     },
 
@@ -39,10 +36,9 @@
         "prefix": "date:parse",
         "description": "Parse date string to struct tm (POSIX strptime)",
         "body": [
-            "#include <time.h>",
-            "",
-            "struct tm ${1:tm_date} = {0};",
-            "strptime(${2:date_string}, \"${3|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\", &${1});"
+            "${1:#include <time.h>\n}",
+            "struct tm ${2:tm_date} = {0};",
+            "strptime(${3:date_string}, \"${4|%Y-%m-%d,%d/%m/%Y,%m/%d/%Y,%Y-%m-%d %H:%M:%S|}\", &${2});"
         ]
     },
 

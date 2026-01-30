@@ -29,7 +29,7 @@
       "public class ${2:MyEntity} {",
       "",
       "\t@Id",
-      "\t@GeneratedValue(strategy = GenerationType.IDENTITY)",
+      "\t@GeneratedValue(strategy = GenerationType.${3|IDENTITY,SEQUENCE,AUTO|})",
       "\tprivate Long id;",
       "",
       "\t// getters and setters",
